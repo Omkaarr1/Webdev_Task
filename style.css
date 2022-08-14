@@ -12,6 +12,46 @@ form
     visibility: visible;
 }
 
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    padding: 4px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
 #row
 {
     text-align: center;
@@ -45,46 +85,4 @@ form
     grid-template-columns: auto auto auto;
     padding: 10px;
     margin-top: 20px;
-}
-  
-  
-#reload,#submit
-{
-    background-color: #f3838c;
-    border-radius: 100px;
-
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,
-    rgba(44, 187, 99, .15) 0 1px 2px,
-    rgba(44, 187, 99, .15) 0 2px 4px,
-    rgba(44, 187, 99, .15) 0 4px 8px,
-    rgba(44, 187, 99, .15) 0 8px 16px,
-    rgba(44, 187, 99, .15) 0 16px 32px;
-
-    color: rgb(0, 124, 128);
-    cursor: pointer;
-    display: inline-block;
-    padding: 7px 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 250ms;
-    border: 0;
-    font-size: 16px;
-    touch-action: manipulation;
-}
-
-#reload
-{
-    text-align: center;
-}
-  
-#reload:hover, #submit:hover
-{
-    box-shadow: rgba(21, 220, 224, 0.35) 0 -25px 18px -14px inset,
-    rgba(44,187,99,.25) 0 1px 2px,
-    rgba(44,187,99,.25) 0 2px 4px,
-    rgba(44,187,99,.25) 0 4px 8px,
-    rgba(44,187,99,.25) 0 8px 16px,
-    rgba(44,187,99,.25) 0 16px 32px;
-
-    transform: scale(0.95);
 }
